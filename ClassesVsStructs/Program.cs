@@ -108,6 +108,8 @@ public class Post
 /// 7. Prior to C# 10 yo ucan't declare a parameterless constructor
 /// 8. Structures are passed by value, but you can use ref to indicate it should be passed by reference
 /// 9. Starting with 7.2 you can declare structures as reference type with the ref keyword
+/// 10. If your struct is under ~24 bytes (some people say 16, some 20, some 24) depending on the processor then copying on the stack
+///     is not necessarily problematic. If it is greater than 24 bytes, then using a class is likely preferred.
 /// 
 /// </summary>
 public struct StructPost
